@@ -13,7 +13,7 @@ provider "aws" {
 }
 resource "aws_instance" "myec2" {
   ami                    = var.my_ami
-  instance_type          = t2.micro
+  instance_type          = "t2.micro"
   tags = { 
      Name = "myinstance"
 }
@@ -26,6 +26,6 @@ variable "my_region" {
 variable "access_key" { }
 variable "secret_key" { } 
 variable "my_ami" {
-   type = string 
-   default = "ami-085ad6ae776d8f09c"
+type = string 
+default = "ami-085ad6ae776d8f09c"
 }
